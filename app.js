@@ -1,10 +1,10 @@
-import { createRoot } from 'react-dom/client';
+//const e = React.createElement;
+import Button from "./button.js";
 
 let myApp = document.getElementById("myApp");
-
 myApp.innerHTML = "Hello World";
+myApp.innerHTML = myApp.innerHTML + '<div id="reactApp"></div>';
 
-myApp.innerHTML = myApp.innerHTML + '<div id="reactApp"> </div>';
-
-const root = createRoot(document.getElementById("reactApp"));
-root.render(<h1>Hello World From Raect</h1>);
+let myReactApp = document.getElementById("reactApp");
+const root = ReactDOM.createRoot("myReactApp");
+root.render(React.createElement(Button));
